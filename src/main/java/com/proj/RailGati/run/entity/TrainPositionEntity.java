@@ -18,7 +18,7 @@ import java.time.LocalDateTime;
         uniqueConstraints = {
                 @UniqueConstraint(
                         name = "idx_position_run_recorded",
-                        columnNames = {"train_run_id", "recorded_date"}
+                        columnNames = {"train_run_id", "recorded_at"}
                 )
         }
 )

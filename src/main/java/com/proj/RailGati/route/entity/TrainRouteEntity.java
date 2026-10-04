@@ -22,7 +22,7 @@ uniqueConstraints = {
         ),
         @UniqueConstraint(
                 name = "uk_train_route_stop",
-                columnNames = {"train_id", "sequence_number"}
+                columnNames = {"train_id", "station_id"}
         )
 })
 public class TrainRouteEntity {

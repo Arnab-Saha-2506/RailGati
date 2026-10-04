@@ -1,5 +1,6 @@
 package com.proj.RailGati.train.entity;
 
+import com.proj.RailGati.route.entity.TrainRouteEntity;
 import jakarta.persistence.*;
 import lombok.*;
 
@@ -26,13 +27,13 @@ public class TrainEntity {
 
     @Enumerated(EnumType.STRING)
     @Column(nullable = false, length = 20)
-    private TrainType type;
+    private TrainType trainType;
 
     @Column(nullable = false)
     @Builder.Default
     private Boolean active = Boolean.TRUE;
 
-    @Column(nullable = false, length = 3)
+    @Column(nullable = false, length = 10)
     private String sourceDivision;
 
     @OneToMany(mappedBy = "train", cascade = CascadeType.ALL, orphanRemoval = true)
